@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
         playerJump.Jumping(inputManager);
         playerShoot.Shooting(bullet1, inputManager);
         playerGetDamage.Die(playerInfo);
-
     }
 
     
