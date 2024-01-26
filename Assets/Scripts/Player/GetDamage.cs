@@ -19,7 +19,7 @@ public class GetDamage : MonoBehaviour
     {
         if(hp <= 0)
         {
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
             info.KillUp();
             StartCoroutine(Revive());
         }

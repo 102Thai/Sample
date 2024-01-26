@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   resetHP: 0
-  revivalTime: 5
+  revivalTime: 0
 --- !u!114 &1456893537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   resetHP: 0
-  revivalTime: 5
+  revivalTime: 0
 --- !u!114 &2144164945
 MonoBehaviour:
   m_ObjectHideFlags: 0
