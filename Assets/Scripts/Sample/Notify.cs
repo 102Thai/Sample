@@ -6,6 +6,7 @@ namespace Assets.Scripts.Sample
     public class Notify : MonoBehaviour
     {
         [SerializeField] TinhToan TinhToan;
+
         private void OnValidate()
         {
             TinhToan = GetComponent<TinhToan>();
