@@ -397,6 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c027785a2199064aa7bf21118842d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user:
+    name: Duy Thai
 --- !u!4 &474266108
 Transform:
   m_ObjectHideFlags: 0

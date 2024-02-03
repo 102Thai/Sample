@@ -1,3 +1,4 @@
+using Assets.Scripts.Sample;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,18 +6,24 @@ using UnityEngine;
 
 public class TinhToan : MonoBehaviour
 {
+    List<INotifyObserver> notifyObservers= new List<INotifyObserver>();
     public event Action<User, string> onUserUserApp;// khi nguoi dung tinh toan xong
-    [SerializeField] User user= new User();
+    [SerializeField] User user;
 
     void Start()
     {
+        NotifyToUser notifyToUser = new NotifyToUser();
+        notifyObservers.Add(notifyToUser);
         float[] numbers= {1,2,3,4,5,6,7};
         Debug.Log("Ket qua la: "+Tong(numbers,ThongBao));
     }
 
     void ThongBao()
     {
-        Debug.Log("Da tinh toan thanh cong");
+        foreach(INotifyObserver notifyObserver in notifyObservers)
+        {
+            notifyObserver.ThongBao();
+        }
     }
 
     float Tong(float[] numbers,Action callback)
@@ -43,7 +50,7 @@ public class TinhToan : MonoBehaviour
         return kq;
     }
 }
-
+[Serializable]
 public class User
 {
     public string name = "Thai";

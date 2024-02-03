@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Sample
 {
-    public class Notify : MonoBehaviour
+    public class NotifyToAdmin : MonoBehaviour
     {
         [SerializeField] TinhToan TinhToan;
 
@@ -14,13 +14,12 @@ namespace Assets.Scripts.Sample
 
         private void Start()
         {
-            TinhToan.onUserUserApp += NotifyToAdmin;
+            TinhToan.onUserUserApp += Notify;
         }
 
-        void NotifyToAdmin(User user,string tenPhepTinh)
+        void Notify(User user,string tenPhepTinh)
         {
-            Debug.Log($"{user.name} da su dung ung dung va thuc hien phep tinh{tenPhepTinh}");
+            Debug.Log($"to Admin: {user.name} da su dung ung dung va thuc hien phep {tenPhepTinh}");
         }
-
     }
 }
